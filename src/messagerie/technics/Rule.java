@@ -1,4 +1,7 @@
 package messagerie.technics;
 
-public abstract class Rule {
+public interface Rule {
+
+    public abstract boolean check(String passwordSeq);
+
 }
