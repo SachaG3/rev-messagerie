@@ -1,16 +1,17 @@
 package messagerie.run;
 
-import messagerie.models.Utilisateur;
+import messagerie.models.User;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class ProgTest {
     public static void main (String[] args){
         try{
-            Utilisateur user = new Utilisateur("Marie","Auguste",22);
+            SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+            User user = new User("Marie","Auguste",dateFormat.parse("03/11/2003"));
             System.out.println(user);
-            user.setAge(22);
             System.out.println(user);
 
-            user.setAge(300);
         } catch(Exception e){
             System.out.println("Age incorrect");
         }
